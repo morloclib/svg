@@ -1,0 +1,19 @@
+module svg (*)
+
+import base (id)
+
+packSVG   :: pack   => Str -> SVG
+unpackSVG :: unpack => SVG -> Str
+
+packSVG R = id
+unpackSVG R = id
+
+source R from "svg.R" ("toSVG")
+
+type R SVG = "character"
+type R Figure = "ggplot"
+
+toSVG :: Figure -> SVG
+
+-- class Figure a where
+--     a -> SVG
