@@ -1,4 +1,4 @@
-require(svglight)
+suppressMessages(library(svglight))
 
 #' Convert a ggplot object to an SVG string
 toSVG <- function(g){
