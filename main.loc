@@ -5,8 +5,8 @@ import base (id)
 packSVG   :: pack   => Str -> SVG
 unpackSVG :: unpack => SVG -> Str
 
-packSVG R = id
-unpackSVG R = id
+packSVG = id
+unpackSVG = id
 
 source R from "svg.R" ("toSVG")
 
