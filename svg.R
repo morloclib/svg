@@ -1,4 +1,6 @@
-suppressMessages(library(svglight))
+suppressMessages(library(svglite))
+
+data("iris")
 
 #' Convert a ggplot object to an SVG string
 toSVG <- function(g){
@@ -12,4 +14,10 @@ toSVG <- function(g){
     s <- sub("(<svg class[^>]*)(.*)", paste("\\1", xlink_def, "\\2"), s)
 
     s
+}
+
+#' Make a ggplot scatterplot from the iris data
+scatterTest <- function(){
+    ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+        geom_point()
 }

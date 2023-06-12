@@ -8,11 +8,12 @@ unpackSVG :: unpack => SVG -> Str
 packSVG = id
 unpackSVG = id
 
-source R from "svg.R" ("toSVG")
+source R from "svg.R" ("toSVG", "scatterTest")
 
 type R SVG = "character"
 type R Figure = "ggplot"
 
+scatterTest :: () -> Figure
 toSVG :: Figure -> SVG
 
 -- class Figure a where
