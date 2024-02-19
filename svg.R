@@ -21,3 +21,7 @@ scatterTest <- function(){
     ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
         geom_point()
 }
+
+# For now, SVGs are just strings, I'll make them flexible typeclasses later on
+packSVG <- function(x) x
+unpackSVG <- function(x) x

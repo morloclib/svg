@@ -2,11 +2,8 @@ module svg (*)
 
 import base (id)
 
-packSVG   :: pack   => Str -> SVG
-unpackSVG :: unpack => SVG -> Str
-
-packSVG = id
-unpackSVG = id
+instance Packable (Str) SVG where
+  source R from "svg.R" ("packSVG" as pack, "unpackSVG" as unpack)
 
 source R from "svg.R" ("toSVG", "scatterTest")
 
